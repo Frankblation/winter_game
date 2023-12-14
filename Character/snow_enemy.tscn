@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ia0bj7ht7410"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v6aby"]
+
+[node name="Snow Enemy" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_v6aby")
