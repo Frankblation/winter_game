@@ -1,14 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://ia0bj7ht7410"]
+[gd_scene load_steps=4 format=3 uid="uid://3vcnfryx8i1"]
 
-[ext_resource type="Texture2D" uid="uid://b4yhbn8sq2ufq" path="res://someguys.png" id="1_31gf8"]
-[ext_resource type="Script" path="res://Character/snow_enemy.gd" id="1_gb87n"]
+[ext_resource type="Script" path="res://Character/snow_enemy.gd" id="1_hvhgn"]
+[ext_resource type="Texture2D" uid="uid://b4yhbn8sq2ufq" path="res://someguys.png" id="2_mgykj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v6aby"]
 radius = 16.0
 height = 60.0
 
 [node name="Snow Enemy" type="CharacterBody2D"]
-script = ExtResource("1_gb87n")
+script = ExtResource("1_hvhgn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 22)
@@ -16,6 +16,6 @@ shape = SubResource("CapsuleShape2D_v6aby")
 
 [node name="Someguys" type="Sprite2D" parent="."]
 position = Vector2(2, 20)
-texture = ExtResource("1_31gf8")
+texture = ExtResource("2_mgykj")
 hframes = 8
 vframes = 8
