@@ -17,5 +17,6 @@ shape = SubResource("CapsuleShape2D_v6aby")
 [node name="Someguys" type="Sprite2D" parent="."]
 position = Vector2(2, 20)
 texture = ExtResource("1_31gf8")
+offset = Vector2(2.08165e-12, -6)
 hframes = 8
 vframes = 8
