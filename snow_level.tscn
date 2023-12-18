@@ -6076,7 +6076,6 @@ scale = Vector2(1.4, 1.633)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(8.57143, 0)
-scale = Vector2(1, 1)
 tile_set = SubResource("TileSet_2p3em")
 format = 2
 layer_0/name = "Ground"
