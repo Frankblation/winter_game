@@ -1,14 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://bqt2g4eiwlx4k"]
+[gd_scene load_steps=11 format=3 uid="uid://bqt2g4eiwlx4k"]
 
 [ext_resource type="Texture2D" uid="uid://b4yhbn8sq2ufq" path="res://someguys.png" id="1_dg8un"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oirmp"]
 atlas = ExtResource("1_dg8un")
 region = Rect2(0, 214, 70, 70)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tvsju"]
-atlas = ExtResource("1_dg8un")
-region = Rect2(70, 214, 70, 70)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_114df"]
 atlas = ExtResource("1_dg8un")
@@ -40,9 +36,6 @@ animations = [{
 "duration": 0.8,
 "texture": SubResource("AtlasTexture_oirmp")
 }, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tvsju")
-}, {
 "duration": 0.91,
 "texture": SubResource("AtlasTexture_114df")
 }, {
@@ -72,8 +65,9 @@ height = 28.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_5bn25")
-frame_progress = 0.260114
+frame_progress = 0.0256056
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 scale = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_twhar")
