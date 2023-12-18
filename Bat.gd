@@ -54,3 +54,15 @@ func _on_bat_detect_body_entered(body):
 func _on_bat_detect_body_exited(_body):
 	player = null
 	player_chase = false
+	
+func bat():
+	pass
+
+
+func _on_bat_attack_body_entered(body):
+	if body.has_method("player"):
+		body.die()
+
+
+#func _on_bat_attack_body_exited(body):
+	#pass # Replace with function body.
