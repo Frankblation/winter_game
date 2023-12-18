@@ -22,10 +22,13 @@ func _physics_process(_delta):
 		position += (player.position - position)/speed
 		$AnimationPlayer.play("Attack")
 		
-		if(player.position.x - position.x) < 0:
-			$AnimationPlayer.flip_h = true
+		# Access the Sprite node to set flip_h
+		var sprite = $Sprite2D  # Adjust the node path based on your scene structure
+
+		if (player.position.x - position.x) < 0:
+			sprite.flip_h = true
 		else:
-			$AnimationPlayer.flip_h = false
+			sprite.flip_h = false
 	else:
 		$AnimationPlayer.play("Idle")
 

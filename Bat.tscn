@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Bat.gd" id="1_4re30"]
 [ext_resource type="Texture2D" uid="uid://ed54lppqi2iq" path="res://Bat_Sprites.png" id="2_w3vnd"]
 
-[sub_resource type="Animation" id="Animation_8342p"]
+[sub_resource type="Animation" id="Animation_yg8li"]
 resource_name = "Attack"
 length = 0.5
 loop_mode = 1
@@ -20,7 +20,7 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4]
 }
 
-[sub_resource type="Animation" id="Animation_jr1li"]
+[sub_resource type="Animation" id="Animation_pm21o"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -35,10 +35,9 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_um4e7"]
+[sub_resource type="Animation" id="Animation_ta56k"]
 resource_name = "Idle"
 length = 0.5
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -52,7 +51,7 @@ tracks/0/keys = {
 "values": [5, 6, 7, 8, 9]
 }
 
-[sub_resource type="Animation" id="Animation_xivbg"]
+[sub_resource type="Animation" id="Animation_wmudr"]
 resource_name = "Die"
 length = 0.5
 tracks/0/type = "value"
@@ -68,12 +67,12 @@ tracks/0/keys = {
 "values": [10, 11, 12, 13, 14]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_5g4ko"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qqpik"]
 _data = {
-"Attack": SubResource("Animation_8342p"),
-"Die": SubResource("Animation_xivbg"),
-"Idle": SubResource("Animation_um4e7"),
-"RESET": SubResource("Animation_jr1li")
+"Attack": SubResource("Animation_yg8li"),
+"Die": SubResource("Animation_wmudr"),
+"Idle": SubResource("Animation_ta56k"),
+"RESET": SubResource("Animation_pm21o")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2buif"]
@@ -92,7 +91,7 @@ vframes = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_5g4ko")
+"": SubResource("AnimationLibrary_qqpik")
 }
 
 [node name="AttackArea" type="CollisionShape2D" parent="."]
