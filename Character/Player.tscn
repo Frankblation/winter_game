@@ -271,4 +271,3 @@ root_node = NodePath("../Sprite")
 libraries = {
 "": SubResource("AnimationLibrary_dqgcx")
 }
- a6faf93048ce7067ed6378a23777542cff56cdb0
