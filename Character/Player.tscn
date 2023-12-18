@@ -266,3 +266,8 @@ root_node = NodePath("../Sprite")
 libraries = {
 "": SubResource("AnimationLibrary_dqgcx")
 }
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="AnimationPlayer"]
+_spawnable_scenes = PackedStringArray("")
+spawn_path = NodePath("../../Sprite")
+spawn_limit = 5
