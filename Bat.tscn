@@ -78,7 +78,7 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_2buif"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m8cja"]
-radius = 524.0
+radius = 204.002
 
 [node name="Bat" type="CharacterBody2D"]
 script = ExtResource("1_4re30")
@@ -100,10 +100,20 @@ rotation = 1.36834
 scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_2buif")
 
+[node name="BatAttack" type="Area2D" parent="."]
+
+[node name="AttackArea" type="CollisionShape2D" parent="BatAttack"]
+position = Vector2(0, -9)
+rotation = 1.36834
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_2buif")
+
 [node name="BatDetect" type="Area2D" parent="."]
 
 [node name="ChaseArea" type="CollisionShape2D" parent="BatDetect"]
 shape = SubResource("CircleShape2D_m8cja")
 
+[connection signal="body_entered" from="BatAttack" to="." method="_on_bat_attack_body_entered"]
+[connection signal="body_exited" from="BatAttack" to="." method="_on_bat_attack_body_exited"]
 [connection signal="body_entered" from="BatDetect" to="." method="_on_bat_detect_body_entered"]
 [connection signal="body_exited" from="BatDetect" to="." method="_on_bat_detect_body_exited"]
