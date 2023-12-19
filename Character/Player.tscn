@@ -277,10 +277,16 @@ _data = {
 [node name="Player" type="CharacterBody2D"]
 script = SubResource("GDScript_t6rf4")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_vertical_offset = -1.0
+drag_bottom_margin = 0.71
+
 [node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(0, 16)
+position = Vector2(-34, -23)
 texture = ExtResource("2_uxk8k")
-offset = Vector2(2.08165e-12, -7)
+centered = false
 hframes = 8
 vframes = 9
 region_rect = Rect2(0, 0, 564, 634)
