@@ -22,7 +22,7 @@ frame = 26
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_vertical_offset = -1.0
-drag_bottom_margin = 0.5
+drag_bottom_margin = 0.82
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -4)

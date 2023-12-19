@@ -6220,6 +6220,7 @@ texture = ExtResource("8_32sgs")
 centered = false
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(6, 60)
 tile_set = SubResource("TileSet_1bwkm")
 format = 2
 layer_0/name = "ground"
