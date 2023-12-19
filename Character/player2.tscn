@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b4yhbn8sq2ufq" path="res://someguys.png" id="2_wh45e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xuh81"]
+size = Vector2(20, 55.5)
 
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
@@ -22,6 +23,5 @@ anchor_mode = 0
 enabled = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-1, -4)
+position = Vector2(1, -4)
 shape = SubResource("RectangleShape2D_xuh81")
