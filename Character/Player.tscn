@@ -13,6 +13,7 @@ script/source = "extends CharacterBody2D
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
 
+var respawn_position : Vector2 = Vector2(225, 350)
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -47,15 +48,17 @@ func _physics_process(delta):
 			#$Player.position.x = \"Position X\"
 			#$Player.position.y = \"Position Y\"
 			
-func die():
-	#death animation
-	#call respawn function
+func player():
 	pass
+	
+func die():
+	anim.play(\"Hurt\")
+	respawn()
 	
 func respawn():
 	#reset position to spawn point
 	#play respawn animation
-	pass
+	position = respawn_position
 "
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v6aby"]
@@ -289,4 +292,3 @@ scale = Vector2(0.9, 0.9)
 shape = SubResource("CapsuleShape2D_v6aby")
 
 [connection signal="body_entered" from="PlayerHitbox" to="." method="_on_player_hitbox_body_entered"]
-[connection signal="body_exited" from="PlayerHitbox" to="." method="_on_player_hitbox_body_exited"]
