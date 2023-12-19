@@ -1,9 +1,9 @@
 extends ParallaxBackground
 
-var scrolling_speed = 100
+var player
+var ground_layer_speed = 0.5  # Adjust as needed
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	scroll_offset.x == scrolling_speed * delta
-	
+	if player:
+		var parallax_offset = Vector2(100, 0)  # Adjust as needed
+		set_offset(-(player.position / ground_layer_speed) + parallax_offset)
