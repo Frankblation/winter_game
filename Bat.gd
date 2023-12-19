@@ -9,6 +9,7 @@ var player = null
 
 ## Get the gravity from the project settings to be synced with RigidBody nodes.
 #var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var respawn_position : Vector2 = Vector2(400, 200)
 
 func _ready():
 	add_to_group("enemies")
@@ -58,11 +59,13 @@ func _on_bat_detect_body_exited(_body):
 func bat():
 	pass
 
+func respawn():
+	position = respawn_position
 
 func _on_bat_attack_body_entered(body):
 	if body.has_method("player"):
 		body.die()
+		respawn()
 
-
-#func _on_bat_attack_body_exited(body):
-	#pass # Replace with function body.
+func _on_bat_attack_body_exited(_body):
+	pass # Replace with function body.
