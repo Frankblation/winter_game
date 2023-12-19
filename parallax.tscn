@@ -6231,5 +6231,5 @@ position = Vector2(1216, 1265)
 scale = Vector2(3, 3)
 
 [node name="Bat" parent="." instance=ExtResource("12_fef5v")]
-position = Vector2(406, 1194)
+position = Vector2(2367, 1017)
 scale = Vector2(3, 3)
