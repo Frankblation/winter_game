@@ -21,7 +21,6 @@ scale = Vector2(1.4, 1.633)
 
 [node name="Background" type="Node2D" parent="."]
 position = Vector2(782.143, -454.991)
-scale = Vector2(1, 1)
 
 [node name="Background1" type="Sprite2D" parent="Background"]
 texture_filter = 1
@@ -45,28 +44,24 @@ script = ExtResource("2_3a456")
 [node name="Clouds" type="Sprite2D" parent="Background"]
 texture_filter = 1
 position = Vector2(320, -25.8727)
-scale = Vector2(1, 1)
 texture = ExtResource("5_tbcp6")
 script = ExtResource("2_3a456")
 
 [node name="Mountains" type="Sprite2D" parent="Background"]
 texture_filter = 1
 position = Vector2(304.286, 569.351)
-scale = Vector2(1, 1)
 texture = ExtResource("6_as3ci")
 script = ExtResource("2_3a456")
 
 [node name="Statictrees" type="Sprite2D" parent="Background"]
 texture_filter = 1
 position = Vector2(327.143, 811.39)
-scale = Vector2(1, 1)
 texture = ExtResource("7_clep6")
 script = ExtResource("2_3a456")
 
 [node name="Redshade" type="Sprite2D" parent="Background"]
 texture_filter = 1
 position = Vector2(324.286, 680.955)
-scale = Vector2(1, 1)
 texture = ExtResource("8_00jcg")
 script = ExtResource("2_3a456")
 
