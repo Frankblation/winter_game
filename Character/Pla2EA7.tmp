@@ -16,7 +16,6 @@ var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
 var respawn_position : Vector2 = Vector2(225, 350)
 var respawn_timer_duration : float = 0.4
 var respawn_timer_elapsed : float = 0.0
-var label = null
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -290,6 +289,8 @@ _data = {
 
 [node name="Player" type="CharacterBody2D"]
 script = SubResource("GDScript_t6rf4")
+SPEED = null
+JUMP_VELOCITY = null
 
 [node name="Camera2D" type="Camera2D" parent="."]
 drag_horizontal_enabled = true
