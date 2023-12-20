@@ -1,7 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://didm52qhuey2j"]
+[gd_scene load_steps=12 format=3 uid="uid://didm52qhuey2j"]
 
 [ext_resource type="Texture2D" uid="uid://2f3r0wan8rum" path="res://background 1.png" id="1_bvdro"]
-[ext_resource type="Script" path="res://plax.gd" id="2_3a456"]
 [ext_resource type="PackedScene" uid="uid://3agw3tsxto6r" path="res://Character/Player.tscn" id="2_3bnoi"]
 [ext_resource type="PackedScene" uid="uid://bbexogurjnr2k" path="res://Bat.tscn" id="2_gifhq"]
 [ext_resource type="Texture2D" uid="uid://hpmnp7qyjp5h" path="res://Moon.png" id="2_qofyw"]
@@ -26,51 +25,43 @@ position = Vector2(782.143, -454.991)
 texture_filter = 1
 position = Vector2(320, 119.871)
 texture = ExtResource("1_bvdro")
-script = ExtResource("2_3a456")
 
 [node name="Stars" type="Sprite2D" parent="Background"]
 texture_filter = 1
 position = Vector2(396.429, -370.024)
 texture = ExtResource("3_0jd3h")
-script = ExtResource("2_3a456")
 
 [node name="Moon" type="Sprite2D" parent="Background"]
 texture_filter = 1
 position = Vector2(-205.714, -37.8277)
 scale = Vector2(0.940767, 0.910204)
 texture = ExtResource("2_qofyw")
-script = ExtResource("2_3a456")
 
 [node name="Clouds" type="Sprite2D" parent="Background"]
 texture_filter = 1
 position = Vector2(320, -25.8727)
 texture = ExtResource("5_tbcp6")
-script = ExtResource("2_3a456")
 
 [node name="Mountains" type="Sprite2D" parent="Background"]
 texture_filter = 1
 position = Vector2(304.286, 569.351)
 texture = ExtResource("6_as3ci")
-script = ExtResource("2_3a456")
 
 [node name="Statictrees" type="Sprite2D" parent="Background"]
 texture_filter = 1
 position = Vector2(327.143, 811.39)
 texture = ExtResource("7_clep6")
-script = ExtResource("2_3a456")
 
 [node name="Redshade" type="Sprite2D" parent="Background"]
 texture_filter = 1
 position = Vector2(324.286, 680.955)
 texture = ExtResource("8_00jcg")
-script = ExtResource("2_3a456")
 
 [node name="Trees" type="Sprite2D" parent="Background"]
 texture_filter = 1
 position = Vector2(264.286, 639.927)
 scale = Vector2(1.04694, 0.934035)
 texture = ExtResource("3_6idsw")
-script = ExtResource("2_3a456")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(8.57143, 0)
@@ -86,7 +77,7 @@ position = Vector2(281.429, 380.282)
 position = Vector2(225.714, 371.708)
 JUMP_VELOCITY = -1100.0
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D2" type="Camera2D" parent="Player"]
 scale = Vector2(1, 1)
 zoom = Vector2(2, 2)
 process_callback = 0
