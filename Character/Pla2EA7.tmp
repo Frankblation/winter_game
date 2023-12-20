@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://3agw3tsxto6r"]
+[gd_scene load_steps=16 format=3 uid="uid://3agw3tsxto6r"]
 
 [ext_resource type="Texture2D" uid="uid://b4yhbn8sq2ufq" path="res://someguys.png" id="2_uxk8k"]
 
@@ -16,7 +16,6 @@ var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
 var respawn_position : Vector2 = Vector2(225, 350)
 var respawn_timer_duration : float = 0.4
 var respawn_timer_elapsed : float = 0.0
-var label = null
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -87,8 +86,9 @@ func _on_end_level_complete():
 	label.visible = true
 "
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpdyr"]
-size = Vector2(20, 45.5556)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v6aby"]
+radius = 16.0
+height = 62.2222
 
 [sub_resource type="Animation" id="Animation_gks43"]
 resource_name = "Blink"
@@ -287,12 +287,10 @@ _data = {
 "Walk": SubResource("Animation_gdohv")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v6aby"]
-radius = 12.2222
-height = 60.0
-
 [node name="Player" type="CharacterBody2D"]
 script = SubResource("GDScript_t6rf4")
+SPEED = null
+JUMP_VELOCITY = null
 
 [node name="Camera2D" type="Camera2D" parent="."]
 drag_horizontal_enabled = true
@@ -309,11 +307,9 @@ vframes = 9
 region_rect = Rect2(0, 0, 564, 634)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-light_mask = 3
-visibility_layer = 3
-position = Vector2(0, 21.5)
+position = Vector2(0, 18)
 scale = Vector2(0.9, 0.9)
-shape = SubResource("RectangleShape2D_gpdyr")
+shape = SubResource("CapsuleShape2D_v6aby")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Sprite")
@@ -324,7 +320,7 @@ libraries = {
 [node name="PlayerHitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHitbox"]
-position = Vector2(0, 20)
+position = Vector2(0, 18)
 scale = Vector2(0.9, 0.9)
 shape = SubResource("CapsuleShape2D_v6aby")
 
