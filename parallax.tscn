@@ -6241,3 +6241,22 @@ JUMP_VELOCITY = -500.0
 [node name="Bat" parent="." instance=ExtResource("12_fef5v")]
 position = Vector2(2367, 1017)
 scale = Vector2(3, 3)
+
+[node name="End" type="Area2D" parent="."]
+position = Vector2(1216, 1265)
+scale = Vector2(3, 3)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1518.0
+offset_top = 644.0
+offset_right = 1642.0
+offset_bottom = 667.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(15, 15)
+text = "Level Complete!"
