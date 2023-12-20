@@ -291,7 +291,7 @@ _data = {
 radius = 12.2222
 height = 60.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player2" type="CharacterBody2D"]
 script = SubResource("GDScript_t6rf4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
